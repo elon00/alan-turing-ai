@@ -1,0 +1,56 @@
+{
+  "mcpServers": {
+    "alan-turing-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "TITAN_PROTOCOL": "TURING",
+        "FIPS_203_LEVEL": "ML-KEM-768",
+        "FIPS_204_LEVEL": "ML-DSA-65"
+      },
+      "tools": [
+        {
+          "name": "execute_universal_turing_machine",
+          "description": "Executes arbitrary state-transition transition matrices and evaluates algorithmic decidability limits",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "transition_matrix": {
+                "type": "string"
+              },
+              "tape_input": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "tape_input"
+            ]
+          }
+        },
+        {
+          "name": "simulate_morphogenetic_reaction_diffusion",
+          "description": "Solves non-linear partial differential equations for Turing pattern formation in biological morphogenesis",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "diffusion_coeff_a": {
+                "type": "number"
+              },
+              "diffusion_coeff_b": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "diffusion_coeff_a"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
